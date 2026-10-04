@@ -1,0 +1,10 @@
+{
+  "name": "pstack-claude",
+  "version": "0.1.0",
+  "description": "pstack の設計・実装・レビューを Claude のモデルで実行する薄いラッパー",
+  "author": {
+    "name": "hasegama"
+  },
+  "repository": "https://github.com/hasegama/pstack-claude",
+  "license": "MIT"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "hasegama-pstack",
+  "owner": {
+    "name": "hasegama"
+  },
+  "plugins": [
+    {
+      "name": "pstack-claude",
+      "source": "./plugins/pstack-claude",
+      "description": "pstack の設計・実装手順を Claude で使う薄いラッパー"
+    }
+  ],
+  "metadata": {
+    "description": "pstack の Claude 用ラッパーと互換性を確認した原本を配布するマーケットプレイス"
+  }
+}
