@@ -15,7 +15,9 @@ def main():
     assert re.fullmatch(r'[0-9a-f]{40}', lock['revision'])
     wrappers = list((PLUGIN / 'skills').glob('*/SKILL.md'))
     agents = list((PLUGIN / 'agents').glob('*.md'))
-    assert len(wrappers) == 43 and len(agents) == 2
+    assert len(wrappers) == 74 and len(agents) == 2
+    wrapper_names = json.loads((PLUGIN / "pstack/skill-names.json").read_text())
+    wrappers = [PLUGIN / "skills" / name / "SKILL.md" for name in wrapper_names]
     assert len(list((PLUGIN / 'upstream/pstack/skills').rglob('SKILL.md'))) == 45
     for path in [*wrappers, *agents]:
         text = path.read_text()
@@ -31,6 +33,9 @@ def main():
     actual = {str(path.relative_to(PLUGIN / 'upstream')): hashlib.sha256(path.read_bytes()).hexdigest()
               for path in (PLUGIN / 'upstream').rglob('*') if path.is_file()}
     assert expected == actual, '原本の内容またはファイル集合が異なります'
+    for line in (PLUGIN / 'shared-files.sha256').read_text().splitlines():
+        sha, name = line.split('  ', 1)
+        assert hashlib.sha256((PLUGIN / name).read_bytes()).hexdigest() == sha, name
     print(f'入口 {len(wrappers)} 件、エージェント {len(agents)} 件、原本 {len(actual)} ファイルを確認しました。')
 
 

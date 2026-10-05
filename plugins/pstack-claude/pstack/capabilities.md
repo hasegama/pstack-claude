@@ -25,9 +25,11 @@
 | `recall`・`reflect` | 原文のみ保持 | Cursor の会話履歴をたどる復元・振り返りは使えない。Claude の履歴形式への接続は未作成 |
 | `automate-me` | 原文のみ保持 | 会話履歴から個人の作業スタイルをスキル化する一連の処理は未移植 |
 | `grokbot/make-bot-ui` | 原文のみ保持 | Cursor の Grok Bot・Routine・秘密情報カードに連動した UI 作成は未移植 |
-| `deslop`・`control-cli`・`control-ui` | 補助スキルの入口あり | ハーネスの構築手順を共有する。ブラウザー・PTY・tmux 等の実行環境を導入するものではない |
+| `deslop`・`control-cli`・`control-ui` | 共通スキルとして原文を直接配置 | ハーネスの構築手順を共有する。ブラウザー・PTY・tmux 等の実行環境を導入するものではない |
 
 Claude 用の入口を作らない 5 件も、同梱の `upstream/pstack/skills/` に残している。
+
+AX・Matt Pocock・explainer・test-auditの31件も共通スキルとして同梱する。補助3件を含む共通34件は `.claude/skills/<name>/` に配置し、`.agents/` には作らない。配布メタデータのYAMLとホスト別の呼び出し設定のみ整え、本文は取得元のまま保持する。
 
 ## poteto-mode の playbook と補助ツール
 

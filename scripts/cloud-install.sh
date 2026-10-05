@@ -4,7 +4,7 @@
 # WORKSPACE_ROOT を省略した場合は CLAUDE_PROJECT_DIR または現在の Git ルートを使う。
 set -euo pipefail
 
-PSTACK_CLAUDE_REF="${PSTACK_CLAUDE_REF:-v0.1.0}"
+PSTACK_CLAUDE_REF="${PSTACK_CLAUDE_REF:-v0.2.0}"
 WORKSPACE_ROOT="${WORKSPACE_ROOT:-${CLAUDE_PROJECT_DIR:-}}"
 if [ -z "$WORKSPACE_ROOT" ]; then
     WORKSPACE_ROOT="$(git rev-parse --show-toplevel)" || {
@@ -27,5 +27,6 @@ curl --fail --show-error --silent --location --retry 3 --connect-timeout 15 --ma
     --output "$download_dir/plugin.tar.gz"
 tar -xzf "$download_dir/plugin.tar.gz" -C "$download_dir" --strip-components=1
 python3 "$download_dir/scripts/install.py" --project "$WORKSPACE_ROOT"
+python3 "$download_dir/scripts/install_shared.py" --project "$WORKSPACE_ROOT" --target claude --source "$download_dir/plugins/pstack-claude" --templates
 python3 "$download_dir/scripts/project_start.py" --project "$WORKSPACE_ROOT"
 echo "[pstack] 配布物 ${PSTACK_CLAUDE_REF} の導入を確認しました。"

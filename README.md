@@ -2,12 +2,12 @@
 
 [pstack](https://github.com/cursor/plugins/tree/799151d91b6e12ee7dbd09f708eec108d7de9b3b/pstack) の設計・実装・レビュー手順を、Claude のモデルで使うための非公式プラグイン。
 
-ラッパー 43 件とエージェント 2 件を提供する。pstack の手順・参照資料・補助スクリプトは、固定コミットの原文を無改変で同梱する。Claude 用の差分は [共通読み替え](plugins/pstack-claude/pstack/runtime.md) にまとめている。
+ラッパー40件・共通スキル34件・エージェント2件を提供する。pstack の手順・参照資料・補助スクリプトは、固定コミットの原文を無改変で同梱する。Claude 用の差分は [共通読み替え](plugins/pstack-claude/pstack/runtime.md) にまとめている。
 
 ## ローカルの Claude Code
 
 ```sh
-claude plugin marketplace add hasegama/pstack-claude#v0.1.0
+claude plugin marketplace add hasegama/pstack-claude#v0.2.0
 claude plugin install pstack-claude@hasegama-pstack
 ```
 
@@ -27,7 +27,7 @@ Claude Code を起動し、例えば次のように呼ぶ。
 
 クラウドではローカルやプロジェクト設定のプラグインが自動導入されないため、同じ配布物をプロジェクトのスキル・エージェントとして展開する。
 
-[scripts/cloud-install.sh](scripts/cloud-install.sh) の内容を環境設定の **Setup script** へ貼り付ける。既定でリリースタグ `v0.1.0` を取得する。コミット単位で固定する場合は、環境変数 `PSTACK_CLAUDE_REF` にこのリポジトリの 40 桁のコミット SHA を指定する。
+[scripts/cloud-install.sh](scripts/cloud-install.sh) の内容を環境設定の **Setup script** へ貼り付ける。既定でリリースタグ `v0.2.0` を取得する。コミット単位で固定する場合は、環境変数 `PSTACK_CLAUDE_REF` にこのリポジトリの 40 桁のコミット SHA を指定する。
 
 `WORKSPACE_ROOT` は対象リポジトリのルート。未設定なら `CLAUDE_PROJECT_DIR`、次に現在の Git ルートを使う。複数リポジトリのセッションなどで作業場所が親ディレクトリになる場合は `WORKSPACE_ROOT` を指定する。
 
@@ -36,7 +36,8 @@ Claude Code を起動し、例えば次のように呼ぶ。
 | 場所 | 内容 |
 | --- | --- |
 | `.claude/pstack-claude/` | 同じ配布物の原本・読み替え・起動処理 |
-| `.claude/skills/pstack-claude-*/` | クラウド用入口 43 件 |
+| `.claude/skills/pstack-claude-*/` | クラウド用pstack入口40件 |
+| `.claude/skills/<name>/` | 共通スキル34件（deslop・control-cli・control-ui・AX・Matt Pocock・explainer・test-audit） |
 | `.claude/agents/pstack-claude-*.md` | クラウド用エージェント 2 件 |
 | `.claude/settings.json` | 既存設定を維持して `SessionStart` を追加 |
 | `.claude/pstack-claude-install.json` | 導入したファイルのハッシュ。更新時にローカルの変更を検出 |
@@ -51,9 +52,17 @@ Claude Code を起動し、例えば次のように呼ぶ。
 
 private サブモジュールの取得は別途リポジトリへのアクセス権が必要。必要な場合は `SUBMODULE_GITHUB_TOKEN` を設定する。既存環境との互換用に `HMO_REPOS_TOKEN` も読める。トークンは Git の一時的なプロセス設定で渡し、URL・ログ・設定ファイルには保存しない。プラグイン本体のダウンロードにはトークンを使わない。
 
-環境には `python3`（3.9 以降）・`git`・`curl`・`tar` が必要。アプリ固有のビルドツール・パッケージ・MCP や、別のスキル集を導入するスクリプトではない。Linux クラウドでの iOS ビルドには対応しない。
+環境には `python3`（3.9 以降）・`git`・`curl`・`tar` が必要。アプリ固有のビルドツール・パッケージ・MCPを導入するスクリプトではない。Linux クラウドでの iOS ビルドには対応しない。
 
 ネットワークは `codeload.github.com` への HTTPS アクセスを使い、GitHub API や Release assets を使わない。クラウドの起動・キャッシュ復元後のスキル読み込みは、利用する環境で確認する必要がある。[Claude のクラウド環境仕様](https://code.claude.com/docs/en/cloud-environments)
+
+## 共通スキルの配置
+
+共通34件は [pstack-agents](https://github.com/hasegama/pstack-agents) と同じ取得SHA・内容を使う。Claudeではすべて `.claude/skills/` に直接配置し、`.agents/` は作らない。`deslop`・`control-cli`・`control-ui` はCursor専用ではないため、共通スキルとして `/deslop` などの名前で利用できる。プラグイン経由では `/pstack-claude:deslop` のように呼ぶ。
+
+公開スキルはライセンスとともに同梱する。YAMLメタデータの引用とホスト別の呼び出し設定を整え、本文は原文を保持する。対応する取得元は `plugins/pstack-claude/shared-skills.json`、ライセンスは同ディレクトリの `licenses/` を参照。
+
+privateテンプレートを利用する場合は `DOTCONFIG_HUB_TOKEN`、`PSTACK_TEMPLATE_REPOSITORY`（owner/repository）、`PSTACK_TEMPLATE_SUBDIR` を設定する。6スキルとdeepsecの補助ファイルは利用者の環境で取得し、この公開リポジトリには含めない。
 
 ## pstack のバージョンを揃える
 

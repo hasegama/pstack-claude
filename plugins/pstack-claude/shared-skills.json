@@ -1,0 +1,310 @@
+{
+  "skills": [
+    {
+      "name": "ax",
+      "repository": "https://github.com/yusukebe/ax",
+      "revision": "f8a24fbab1b046f0bd49590ef2c31eaee2e9698f",
+      "path": "skills/ax",
+      "licenses": [
+        "licenses/yusukebe-ax/LICENSE"
+      ]
+    },
+    {
+      "name": "ask-matt",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/ask-matt",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "code-review",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/code-review",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "codebase-design",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/codebase-design",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "diagnosing-bugs",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/diagnosing-bugs",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "domain-modeling",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/domain-modeling",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "grill-with-docs",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/grill-with-docs",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "implement",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/implement",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "improve-codebase-architecture",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/improve-codebase-architecture",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "prototype",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/prototype",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "research",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/research",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "resolving-merge-conflicts",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/resolving-merge-conflicts",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "to-spec",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/to-spec",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "to-tickets",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/to-tickets",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "triage",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/triage",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "wayfinder",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/wayfinder",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "wizard",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/engineering/wizard",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "grill-me",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/productivity/grill-me",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "grilling",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/productivity/grilling",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "handoff",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/productivity/handoff",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "to-questionnaire",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/productivity/to-questionnaire",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "wait-what",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/productivity/wait-what",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "writing-for-agents",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "path": "skills/productivity/writing-for-agents",
+      "licenses": [
+        "licenses/mattpocock-skills/LICENSE"
+      ]
+    },
+    {
+      "name": "explainer",
+      "repository": "https://github.com/mizchi/explainer",
+      "revision": "93499f728f724a1347c81e36a2683b95da10b112",
+      "path": "skills/explainer",
+      "licenses": [
+        "licenses/mizchi-explainer/LICENSE"
+      ]
+    },
+    {
+      "name": "explainer-book",
+      "repository": "https://github.com/mizchi/explainer",
+      "revision": "93499f728f724a1347c81e36a2683b95da10b112",
+      "path": "skills/explainer-book",
+      "licenses": [
+        "licenses/mizchi-explainer/LICENSE"
+      ]
+    },
+    {
+      "name": "first-reader",
+      "repository": "https://github.com/mizchi/explainer",
+      "revision": "93499f728f724a1347c81e36a2683b95da10b112",
+      "path": "skills/first-reader",
+      "licenses": [
+        "licenses/mizchi-explainer/LICENSE"
+      ]
+    },
+    {
+      "name": "explain-with-anim",
+      "repository": "https://github.com/mizchi/explainer",
+      "revision": "93499f728f724a1347c81e36a2683b95da10b112",
+      "path": "skills/explain-with-anim",
+      "licenses": [
+        "licenses/mizchi-explainer/LICENSE"
+      ]
+    },
+    {
+      "name": "explanatory-animation",
+      "repository": "https://github.com/mizchi/explainer",
+      "revision": "93499f728f724a1347c81e36a2683b95da10b112",
+      "path": "skills/explanatory-animation",
+      "licenses": [
+        "licenses/mizchi-explainer/LICENSE"
+      ]
+    },
+    {
+      "name": "d2-diagram",
+      "repository": "https://github.com/mizchi/explainer",
+      "revision": "93499f728f724a1347c81e36a2683b95da10b112",
+      "path": "skills/d2-diagram",
+      "licenses": [
+        "licenses/mizchi-explainer/LICENSE"
+      ]
+    },
+    {
+      "name": "d2-slides",
+      "repository": "https://github.com/mizchi/explainer",
+      "revision": "93499f728f724a1347c81e36a2683b95da10b112",
+      "path": "skills/d2-slides",
+      "licenses": [
+        "licenses/mizchi-explainer/LICENSE"
+      ]
+    },
+    {
+      "name": "test-audit",
+      "repository": "https://github.com/openclaw/openclaw",
+      "revision": "4ad3766a2169740ea369afd08f65a1db11ccbfb5",
+      "path": ".agents/skills/test-audit",
+      "licenses": [
+        "licenses/openclaw-openclaw/LICENSE"
+      ]
+    },
+    {
+      "name": "deslop",
+      "repository": "https://github.com/cursor/plugins",
+      "revision": "799151d91b6e12ee7dbd09f708eec108d7de9b3b",
+      "path": "cursor-team-kit/skills/deslop",
+      "licenses": [
+        "upstream/cursor-team-kit/LICENSE"
+      ]
+    },
+    {
+      "name": "control-cli",
+      "repository": "https://github.com/cursor/plugins",
+      "revision": "799151d91b6e12ee7dbd09f708eec108d7de9b3b",
+      "path": "cursor-team-kit/skills/control-cli",
+      "licenses": [
+        "upstream/cursor-team-kit/LICENSE"
+      ]
+    },
+    {
+      "name": "control-ui",
+      "repository": "https://github.com/cursor/plugins",
+      "revision": "799151d91b6e12ee7dbd09f708eec108d7de9b3b",
+      "path": "cursor-team-kit/skills/control-ui",
+      "licenses": [
+        "upstream/cursor-team-kit/LICENSE"
+      ]
+    }
+  ]
+}

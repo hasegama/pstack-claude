@@ -1,6 +1,6 @@
 {
   "name": "pstack-claude",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "pstack の設計・実装・レビューを Claude のモデルで実行する薄いラッパー",
   "author": {
     "name": "hasegama"

@@ -37,7 +37,7 @@ class InstallTests(unittest.TestCase):
         self.assertEqual(len(config['hooks']['SessionStart']), 2)
         wrappers = list((self.project / '.claude/skills').glob('*/SKILL.md'))
         agents = list((self.project / '.claude/agents').glob('*.md'))
-        self.assertEqual((len(wrappers), len(agents)), (43, 2))
+        self.assertEqual((len(wrappers), len(agents)), (40, 2))
         for path in wrappers + agents:
             text = path.read_text()
             self.assertNotIn('${CLAUDE_PLUGIN_ROOT}', text)

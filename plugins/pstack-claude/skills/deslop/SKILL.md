@@ -1,7 +1,22 @@
 ---
 name: deslop
-description: "差分から不要なコメント、防御的なコード、型の回避などを見つけ、既存の書き方に合わせる。コミット前のコード整理に使う。"
+description: "Remove AI-generated code slop and clean up code style"
 ---
 
-最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/cursor-team-kit/skills/deslop/SKILL.md) を全文読む。
-読み替えを原文と参照資料に適用し、ユーザーの依頼または親から渡された対象について作業する。参照資料・スクリプトの相対パスは原文の場所から解決する。
+# Remove AI code slop
+
+Check the diff against main and remove AI-generated slop introduced in the branch.
+
+## Focus Areas
+
+- Extra comments that are unnecessary or inconsistent with local style
+- Defensive checks or try/catch blocks that are abnormal for trusted code paths
+- Casts to `any` used only to bypass type issues
+- Deeply nested code that should be simplified with early returns
+- Other patterns inconsistent with the file and surrounding codebase
+
+## Guardrails
+
+- Keep behavior unchanged unless fixing a clear bug.
+- Prefer minimal, focused edits over broad rewrites.
+- Keep the final summary concise (1-3 sentences).

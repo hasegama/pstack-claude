@@ -31,7 +31,8 @@ def install(project, hooks=True):
         if relative.parts[0] in {'skills', 'agents', 'pstack'} and path.suffix == '.md':
             data = data.decode().replace('${CLAUDE_PLUGIN_ROOT}', str(bundle)).replace('pstack-claude:', 'pstack-claude-').encode()
         files[bundle / relative] = (data, path.stat().st_mode & 0o777)
-    for path in source.glob('skills/*/SKILL.md'):
+    for skill_name in json.loads((source / 'pstack/skill-names.json').read_text()):
+        path = source / 'skills' / skill_name / 'SKILL.md'
         data, mode = files[bundle / path.relative_to(source)]
         name = f'{PREFIX}-{path.parent.name}'
         data = re.sub(rb'(?m)^name: [^\n]+$', f'name: {name}'.encode(), data, count=1)
@@ -42,6 +43,7 @@ def install(project, hooks=True):
         data = re.sub(rb'(?m)^name: [^\n]+$', f'name: {name}'.encode(), data, count=1)
         files[project / '.claude/agents' / f'{name}.md'] = (data, mode)
     files[bundle / 'upstream.json'] = ((ROOT / 'upstream.json').read_bytes(), 0o644)
+    files[bundle / 'scripts/install_shared.py'] = ((ROOT / 'scripts/install_shared.py').read_bytes(), 0o755)
     files[bundle / 'scripts/project_start.py'] = ((ROOT / 'scripts/project_start.py').read_bytes(), 0o755)
 
     manifest = project / '.claude/pstack-claude-install.json'
@@ -74,7 +76,7 @@ def install(project, hooks=True):
     if settings is not None:
         atomic_write(settings_path, (json.dumps(settings, ensure_ascii=False, indent=2) + '\n').encode(), 0o644)
     atomic_write(manifest, (json.dumps({'version': json.loads((source / '.claude-plugin/plugin.json').read_text())['version'], 'files': {str(path.relative_to(project)): digest(data) for path, (data, _) in files.items()}}, indent=2) + '\n').encode(), 0o644)
-    print('[pstack] Claude 用スキル 43 件とエージェント 2 件を配置しました:', project)
+    print('[pstack] Claude 用ラッパー40件とエージェント2件を配置しました:', project)
 
 
 def main():
