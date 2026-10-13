@@ -1,6 +1,7 @@
 ---
 name: principle-foundational-thinking
 description: "ロジックを書く前に型・データ構造・共有状態を決める。実装の土台や作業順を設計するときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-foundational-thinking/SKILL.md) を全文読む。

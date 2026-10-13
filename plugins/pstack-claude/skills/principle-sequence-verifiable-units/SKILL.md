@@ -1,6 +1,7 @@
 ---
 name: principle-sequence-verifiable-units
 description: "各段階で結果を確かめられる単位に分割して順に進める。多段階の変更や移行を計画するときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-sequence-verifiable-units/SKILL.md) を全文読む。

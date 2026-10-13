@@ -1,6 +1,7 @@
 ---
 name: teach
 description: "how と why の調査をつなぎ、変更や仕組みを理解できる説明にまとめる。/teach や、変更・サブシステムをきちんと理解したい依頼に使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/teach/SKILL.md) を全文読む。

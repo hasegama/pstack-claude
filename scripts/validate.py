@@ -8,6 +8,11 @@ import re
 
 ROOT = Path(__file__).resolve().parent.parent
 PLUGIN = ROOT / 'plugins/pstack-claude'
+MANUAL_ONLY = re.compile(r'(?m)^disable-model-invocation: true$')
+
+
+def frontmatter(path):
+    return path.read_text().split('\n---', 1)[0]
 
 
 def main():
@@ -18,6 +23,7 @@ def main():
     agents = list((PLUGIN / 'agents').glob('*.md'))
     assert wrappers == sorted((PLUGIN / 'skills').glob('*/SKILL.md')) and len(wrappers) == 46 and len(agents) == 2
     manifest = json.loads((PLUGIN / '.claude-plugin/plugin.json').read_text())
+    assert manifest['version'] == lock['pstack_version'], 'プラグインの版を pstack の版に合わせてください'
     helpers = list((PLUGIN / manifest['skills']).glob('*/SKILL.md'))
     assert sorted(path.parent.name for path in helpers) == ['control-cli', 'control-ui', 'deslop']
     assert len(list((PLUGIN / 'upstream/pstack/skills').rglob('SKILL.md'))) == 52
@@ -28,6 +34,9 @@ def main():
         for target in re.findall(r'\]\(([^)]+)\)', text):
             target = target.replace('${CLAUDE_PLUGIN_ROOT}', str(PLUGIN))
             assert Path(target).is_file(), (path, target)
+    for path in wrappers:
+        original = PLUGIN / 'upstream/pstack/skills' / path.parent.name / 'SKILL.md'
+        assert bool(MANUAL_ONLY.search(frontmatter(path))) == bool(MANUAL_ONLY.search(frontmatter(original))), path
     expected = {}
     for line in (ROOT / 'upstream-files.sha256').read_text().splitlines():
         sha, name = line.split('  ', 1)

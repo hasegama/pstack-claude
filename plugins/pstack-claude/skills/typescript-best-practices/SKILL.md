@@ -1,6 +1,7 @@
 ---
 name: typescript-best-practices
 description: "型の設計と TypeScript コードの品質を確認する。.ts・.tsx ファイルを読む、書く、レビューするときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/typescript-best-practices/SKILL.md) を全文読む。

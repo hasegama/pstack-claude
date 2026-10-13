@@ -1,6 +1,7 @@
 ---
 name: technical-writing
 description: "技術文書の構造と文章を整える。文書、RFC、README、PR 説明、コミットメッセージの作成・レビューに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/technical-writing/SKILL.md) を全文読む。

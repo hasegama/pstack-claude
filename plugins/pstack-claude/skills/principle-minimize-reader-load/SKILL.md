@@ -1,6 +1,7 @@
 ---
 name: principle-minimize-reader-load
 description: "処理を読むために追う層と覚える状態を減らす。追跡しにくいコードの設計・レビューに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-minimize-reader-load/SKILL.md) を全文読む。

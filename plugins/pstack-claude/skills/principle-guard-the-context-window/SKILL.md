@@ -1,6 +1,7 @@
 ---
 name: principle-guard-the-context-window
 description: "大量の出力やファイルを扱う作業で、主会話に残す要点と分担する調査を整理する。コンテキストの消費が大きいときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-guard-the-context-window/SKILL.md) を全文読む。

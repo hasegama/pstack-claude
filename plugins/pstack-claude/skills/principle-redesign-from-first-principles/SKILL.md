@@ -1,6 +1,7 @@
 ---
 name: principle-redesign-from-first-principles
 description: "新しい要件を最初から前提にした構造を考える。既存設計へ要件を統合するときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-redesign-from-first-principles/SKILL.md) を全文読む。

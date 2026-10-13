@@ -1,6 +1,7 @@
 ---
 name: principle-migrate-callers-then-delete-legacy-apis
 description: "新しい内部 API へ呼び出し側を移し、旧 API を同じ作業で取り除く。内部 API の移行に使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md) を全文読む。

@@ -1,6 +1,7 @@
 ---
 name: principle-type-system-discipline
 description: "不正な状態を表しにくい型、境界のパース、網羅的な分岐を設計する。型付き言語の実装・シグネチャのレビューに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-type-system-discipline/SKILL.md) を全文読む。

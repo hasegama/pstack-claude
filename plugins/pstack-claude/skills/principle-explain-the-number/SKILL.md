@@ -1,6 +1,7 @@
 ---
 name: principle-explain-the-number
 description: "測った数値を信じる・報告する前に、律速要因を特定し、別のものを測っていないかを確かめる。性能や評価結果の数値を扱うときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-explain-the-number/SKILL.md) を全文読む。

@@ -1,6 +1,7 @@
 ---
 name: principle-experience-first
 description: "機能の範囲や UX の判断を利用者の体験から決める。実装都合と体験の品質が競合するときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-experience-first/SKILL.md) を全文読む。

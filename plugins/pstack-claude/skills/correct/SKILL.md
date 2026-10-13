@@ -1,6 +1,7 @@
 ---
 name: correct
 description: "このリポジトリでエージェントが繰り返す誤りを分類し、構造・型・lint・テスト・文書の順で再発しない仕組みにする。/correct や、同じ指摘が繰り返されるときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/correct/SKILL.md) を全文読む。

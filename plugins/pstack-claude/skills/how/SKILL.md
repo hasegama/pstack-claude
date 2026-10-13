@@ -1,6 +1,7 @@
 ---
 name: how
 description: "実コードから仕組み・処理の流れ・配置先・責務を説明する。どう動くか、どの層に置くか、変更前の構造理解を求める依頼に使う。設計意図の履歴調査は why を使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/how/SKILL.md) を全文読む。

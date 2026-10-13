@@ -1,6 +1,7 @@
 ---
 name: principle-test-behavior-not-implementation
 description: "利用者と同じ呼び方でコードを呼び、利用者が見る結果を具体的な値で検証する。テストを書く・変える・残すときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-test-behavior-not-implementation/SKILL.md) を全文読む。

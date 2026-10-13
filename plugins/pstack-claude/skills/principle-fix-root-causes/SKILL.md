@@ -1,6 +1,7 @@
 ---
 name: principle-fix-root-causes
 description: "症状を再現して原因までたどり、根本を直す。不具合調査・修正で使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-fix-root-causes/SKILL.md) を全文読む。

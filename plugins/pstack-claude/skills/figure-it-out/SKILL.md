@@ -1,6 +1,7 @@
 ---
 name: figure-it-out
 description: "既存の手順で扱いきれない大きな変更について、検証できる単位と仮説検証の手順を組み立てる。/figure-it-out や、大規模な移行の設計・実装に使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/figure-it-out/SKILL.md) を全文読む。

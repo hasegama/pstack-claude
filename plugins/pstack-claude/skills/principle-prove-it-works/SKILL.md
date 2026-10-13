@@ -1,6 +1,7 @@
 ---
 name: principle-prove-it-works
 description: "実物・実値・実行結果を確認して作業の完了を示す。完了報告前の検証に使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-prove-it-works/SKILL.md) を全文読む。

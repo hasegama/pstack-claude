@@ -1,6 +1,7 @@
 ---
 name: principle-make-operations-idempotent
 description: "中断や再試行の後も同じ状態へ収束する処理を設計する。コマンド・初期化・処理ループを作るときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-make-operations-idempotent/SKILL.md) を全文読む。

@@ -1,6 +1,7 @@
 ---
 name: ketchup
 description: "ユーザーの最後の発言以降にこの会話で起きたことを平易にまとめ、ユーザーの判断が必要な事項ごとに要点を示す。/ketchup や、途中経過に追いつきたいという依頼に使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/ketchup/SKILL.md) を全文読む。

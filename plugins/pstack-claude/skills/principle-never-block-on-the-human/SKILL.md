@@ -1,6 +1,7 @@
 ---
 name: principle-never-block-on-the-human
 description: "可逆的な作業を進めて具体的な結果を示す。作業を進めるか確認するかの判断に使い、ユーザーの依頼範囲に従う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-never-block-on-the-human/SKILL.md) を全文読む。

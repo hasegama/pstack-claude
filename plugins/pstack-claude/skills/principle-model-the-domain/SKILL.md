@@ -1,6 +1,7 @@
 ---
 name: principle-model-the-domain
 description: "分岐や状態の前提をデータ構造・状態機械・型で表現する。状態を持つ処理や重複した条件を設計するときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-model-the-domain/SKILL.md) を全文読む。

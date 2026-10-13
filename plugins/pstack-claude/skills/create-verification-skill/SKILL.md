@@ -1,6 +1,7 @@
 ---
 name: create-verification-skill
 description: "アプリを利用者と同じ経路で検証するプロジェクト用スキルと機能マップを作る。/create-verification-skill や、検証手順をスキルにしたい依頼に使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/create-verification-skill/SKILL.md) を全文読む。

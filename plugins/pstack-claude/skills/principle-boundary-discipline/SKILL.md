@@ -1,6 +1,7 @@
 ---
 name: principle-boundary-discipline
 description: "検証やエラー処理を CLI・設定・ネットワークなどの境界へ集め、内部の型と純粋な処理を活かす。境界の設計時に使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-boundary-discipline/SKILL.md) を全文読む。

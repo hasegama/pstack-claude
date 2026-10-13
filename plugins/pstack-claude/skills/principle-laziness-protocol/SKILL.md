@@ -1,6 +1,7 @@
 ---
 name: principle-laziness-protocol
 description: "削除と必要最小限の変更で問題を解く。リファクタリングや抽象化・層の追加を判断するときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-laziness-protocol/SKILL.md) を全文読む。

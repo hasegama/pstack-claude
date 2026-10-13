@@ -1,6 +1,7 @@
 ---
 name: architect
 description: "型・関数シグネチャ・モジュール構成を設計し、独立した複数案を比較してから実装する。/architect や、構造の判断を伴う実装に使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/architect/SKILL.md) を全文読む。

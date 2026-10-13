@@ -1,6 +1,7 @@
 ---
 name: interrogate
 description: "独立した複数の Claude レビュアーで同じ対象を批判的に検証し、盲点や反証をまとめる。/interrogate や、設計・コードを厳しくレビューする依頼に使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/interrogate/SKILL.md) を全文読む。

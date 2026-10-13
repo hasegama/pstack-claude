@@ -1,6 +1,7 @@
 ---
 name: principle-subtract-before-you-add
 description: "不要なコードや参照を除去してから変更を加える。追加・リファクタリング・書き換えの作業順を決めるときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-subtract-before-you-add/SKILL.md) を全文読む。

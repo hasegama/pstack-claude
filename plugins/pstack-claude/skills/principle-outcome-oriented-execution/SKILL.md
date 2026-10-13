@@ -1,6 +1,7 @@
 ---
 name: principle-outcome-oriented-execution
 description: "移行の最終形へ収束する作業順を組み立てる。段階的な書き換えや移行で中間実装の要否を判断するときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-outcome-oriented-execution/SKILL.md) を全文読む。

@@ -1,6 +1,7 @@
 ---
 name: arena
 description: "同じ課題に独立した複数候補を作り、評価して基準案に優れた部分を統合する。/arena や、設計・実装案の比較に使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/arena/SKILL.md) を全文読む。

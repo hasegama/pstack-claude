@@ -1,6 +1,7 @@
 ---
 name: principle-build-the-lever
 description: "繰り返せるツール・スクリプトで変更や検証を実行する。手作業の反復が発生する編集・移行・分析に使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/principle-build-the-lever/SKILL.md) を全文読む。

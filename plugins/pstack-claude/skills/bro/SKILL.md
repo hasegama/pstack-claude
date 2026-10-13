@@ -1,6 +1,7 @@
 ---
 name: bro
 description: "直前の説明を専門用語に頼らない平易な言葉で言い直す。/bro や、説明をわかりやすくしてほしいという依頼に使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/bro/SKILL.md) を全文読む。

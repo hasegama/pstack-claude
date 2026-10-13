@@ -5,7 +5,7 @@
 # 環境設定の環境変数はこのスクリプトに渡らないため、取得する版は下の値を書き換えて指定する。
 set -euo pipefail
 
-PSTACK_CLAUDE_REF="${PSTACK_CLAUDE_REF:-v0.3.0}"
+PSTACK_CLAUDE_REF="${PSTACK_CLAUDE_REF:-v0.15.21}"
 PLUGINS_DIR="${PLUGINS_DIR:-/opt/claude-plugins}"
 
 download_dir="$(mktemp -d)"

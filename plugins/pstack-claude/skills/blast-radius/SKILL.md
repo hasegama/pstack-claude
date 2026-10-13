@@ -1,6 +1,7 @@
 ---
 name: blast-radius
 description: "変更が差分の外に及ぼす影響を調べ、成立条件を実コードの実行で確認する。影響範囲や小さな差分の安全性をレビューするときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/blast-radius/SKILL.md) を全文読む。

@@ -1,6 +1,7 @@
 ---
 name: no-comments
 description: "Comment Sicko にコメントの妥当性を調べさせ、採用した指摘を反映する。/no-comments や、コメントで補っている設計を見直す依頼に使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/no-comments/SKILL.md) を全文読む。

@@ -1,6 +1,7 @@
 ---
 name: benchmark-checklist
 description: "測定した性能の数値を、律速要因・設定・上限・エラー・再現性・全体への影響・処理の実行の有無から確かめる。ベンチマークの実行や、高速化・劣化を報告するときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/benchmark-checklist/SKILL.md) を全文読む。

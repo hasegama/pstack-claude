@@ -7,7 +7,7 @@
 ## ローカルの Claude Code
 
 ```sh
-claude plugin marketplace add hasegama/pstack-claude#v0.3.0
+claude plugin marketplace add hasegama/pstack-claude#v0.15.21
 claude plugin install pstack-claude@hasegama-pstack
 ```
 
@@ -21,13 +21,15 @@ Claude Code を起動し、例えば次のように呼ぶ。
 /pstack-claude:poteto-mode この機能を実装して
 ```
 
+入口は本家と同じく手動呼び出し専用で、Claude が会話の流れから自分で選ぶことはない。呼び出したスキルの手順が他のスキルを使うときは、Claude がそのファイルを読む。補助スキル3件は Claude が自分で呼べる。
+
 原本が同梱されているので、Cursor のインストールは不要。モデルは親の Claude を継承し、比較は独立したコンテキストで実行する。複数社のモデルを比較する機能にはならない。
 
 ## Claude クラウド
 
 クラウドのセッションは、マーケットプレイスやユーザー設定で有効にしたプラグインを読み込まない。Setup script でプラグインを環境に展開し、環境変数で読み込ませる。Claude Code 2.1.280 以降が必要。
 
-1. [scripts/cloud-install.sh](scripts/cloud-install.sh) の内容を、環境設定の **Setup script** に貼り付ける。リリースタグ `v0.3.0` を `/opt/claude-plugins/pstack-claude` に展開する。
+1. [scripts/cloud-install.sh](scripts/cloud-install.sh) の内容を、環境設定の **Setup script** に貼り付ける。リリースタグ `v0.15.21` を `/opt/claude-plugins/pstack-claude` に展開する。
 2. 環境設定の **Environment variables** に `CLAUDE_CODE_PLUGIN_DIRS=/opt/claude-plugins` を書く。
 
 呼び出し名はローカルと同じ `/pstack-claude:how` など。`/opt/claude-plugins` に置いた他のプラグインも、`.claude-plugin/plugin.json` があれば同じ環境変数でまとめて読み込まれる。
@@ -38,11 +40,11 @@ Setup script には環境設定の環境変数が渡らないため、取得す�
 
 ## pstack のバージョンを揃える
 
-取得元と対応バージョンは [upstream.json](upstream.json) を正とする。この版は pstack `0.15.21`、`cursor/plugins@997ffc7fe26bdaa6478a14e7f5b8d5f9ed747102`。
+取得元と対応バージョンは [upstream.json](upstream.json) を正とする。この版は pstack `0.15.21`、`cursor/plugins@997ffc7fe26bdaa6478a14e7f5b8d5f9ed747102`。プラグインのバージョンとリリースタグは、対応する pstack のバージョンと同じにする。
 
-Cursor 側のセットアップも、利用するこの配布物の `upstream.json` を読み、`revision` の SHA を取得する。ラッパーと pstack の組み合わせを固定できる。ラッパーのバージョンは `plugin.json`、対応する pstack の SHA は `upstream.json` が管理する。
+Cursor 側のセットアップも、利用するこの配布物の `upstream.json` を読み、`revision` の SHA を取得する。ラッパーと pstack の組み合わせを固定できる。
 
-更新時は原本と `upstream.json`・`upstream-files.sha256` を更新し、ラッパーと [機能対応表](plugins/pstack-claude/pstack/capabilities.md) を確認する。検証後にプラグインのバージョンを上げ、新しいリリースタグを作る。公開済みタグは移動しない。
+更新時は原本と `upstream.json`・`upstream-files.sha256` を更新し、ラッパーと [機能対応表](plugins/pstack-claude/pstack/capabilities.md) を確認する。入口の `disable-model-invocation` は原文に合わせる。検証後に `plugin.json` のバージョンを pstack と同じにし、新しいリリースタグを作る。公開済みタグは移動しない。
 
 ## 検証
 
@@ -53,7 +55,7 @@ claude plugin validate .
 claude plugin validate ./plugins/pstack-claude
 ```
 
-検証するのは配布物の構造・参照先・原本ハッシュと、Setup script による展開。Claude のモデルによる全ワークフローの実行を保証するものではない。PR 監視や Cursor transcript 連携などの未移植部分は機能対応表を参照。未移植機能への遷移を制限するルールは追加していない。
+検証するのは配布物の構造・参照先・原本ハッシュ、入口の呼び出し設定と版の一致、Setup script による展開。Claude のモデルによる全ワークフローの実行を保証するものではない。PR 監視や Cursor transcript 連携などの未移植部分は機能対応表を参照。未移植機能への遷移を制限するルールは追加していない。
 
 ## ライセンス
 

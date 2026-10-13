@@ -1,6 +1,7 @@
 ---
 name: unslop
 description: "抽象的で冗長な AI らしい言い回しを削り、具体的で読みやすい文章にする。説明・文書・返信などの文章を書くときに使う。"
+disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/unslop/SKILL.md) を全文読む。
