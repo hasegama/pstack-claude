@@ -11,9 +11,12 @@
 | `interrogate` | 入口あり。独立した Claude による批判的レビュー | 複数社・複数モデルファミリーによる合意の確認にはならない |
 | `swarm` | 入口あり。分担・競争・結果集約 | ワーカーごとの別クラウド VM とユーザー端末への切り替えはない |
 | `blast-radius`・`tdd`・`no-comments` | 入口あり。影響調査、テストからの修正、コメントレビュー | 実コードを動かす依存ツールは対象環境に必要 |
+| `benchmark-checklist` | 入口あり。性能の測定値を報告・判断の前に確かめる | プロファイラーなどの計測ツールは対象環境に必要 |
+| `correct` | 入口あり。繰り返す誤りを構造・型・lint・テストで防ぐ | 原文をそのまま参照 |
 | `typescript-best-practices` | 入口あり。型・TypeScript の設計基準 | 原文をそのまま参照 |
 | `bro`・`unslop`・`technical-writing` | 入口あり。説明・文章の整理 | 日本語指定などはプロジェクトの指示に従う |
-| `principle-*` 全 21 件 | 入口あり。設計・実装・検証の原則 | 原則の本文をそのまま参照 |
+| `ketchup` | 入口あり。最後の発言以降の経過と判断事項のまとめ | 画面の撮影・動画などの資料は Claude で使えるツール次第 |
+| `principle-*` 全 24 件 | 入口あり。設計・実装・検証の原則 | 原則の本文をそのまま参照 |
 | `why` | 入口あり。履歴と外部の根拠を調査 | Cursor の MCP 接続は引き継がれない。接続のない情報源は調査できない |
 | `teach` | 入口あり。`how` と `why` を使った説明 | 外部情報源と図の画像生成は、Claude にあるツール次第 |
 | `create-verification-skill` | 入口あり。検証スキルと機能マップを作成 | 作成先を Claude 用に変更。ブラウザー等の実行環境は別途必要 |
@@ -21,13 +24,14 @@
 | `show-me-your-work` | 入口あり。TSV の記録と既存の `scripts/log.sh` | Cursor transcript と照合する監査は未移植。レビューは Claude のみ |
 | `figure-it-out` | 入口あり。独自の作業計画、検証単位、仮説検証ループ | 最後の transcript 監査は `show-me-your-work` と同じ制約 |
 | `poteto-mode` | 入口あり。原則と手順の読み込み、設計・実装の委譲 | 常駐モードの表示・リマインダー、後述の運用 playbook は未移植 |
-| `setup-pstack` | 原文のみ保持 | Cursor のモデル検出・設定画面と `.mdc` 出力は使えない。今回は親の Claude を継承 |
+| `setup-pstack` | 原文のみ保持 | Cursor のモデル検出・推論予算の設定と `.mdc` 出力は使えない。今回は親の Claude を継承 |
 | `recall`・`reflect` | 原文のみ保持 | Cursor の会話履歴をたどる復元・振り返りは使えない。Claude の履歴形式への接続は未作成 |
 | `automate-me` | 原文のみ保持 | 会話履歴から個人の作業スタイルをスキル化する一連の処理は未移植 |
-| `grokbot/make-bot-ui` | 原文のみ保持 | Cursor の Grok Bot・Routine・秘密情報カードに連動した UI 作成は未移植 |
+| `make-bot-ui` | 原文のみ保持 | Cursor の Grok Bot・Routine・秘密情報カードに連動した UI 作成は未移植 |
+| `poteto-help` | 原文のみ保持 | Cursor での導入・Custom Mode・`/setup-pstack` を前提に案内するため、入口は作らない |
 | `deslop`・`control-cli`・`control-ui` | 同梱の原文をそのままスキルとして読み込む | ハーネスの構築手順を共有する。ブラウザー・PTY・tmux 等の実行環境を導入するものではない |
 
-Claude 用の入口を作らない 5 件も、同梱の `upstream/pstack/skills/` に残している。
+Claude 用の入口を作らない 6 件も、同梱の `upstream/pstack/skills/` に残している。
 
 ## poteto-mode の playbook と補助ツール
 
@@ -39,7 +43,7 @@ Claude 用の入口を作らない 5 件も、同梱の `upstream/pstack/skills/
 | `visual-parity` | 比較と修正の手順を使う。実際の UI 起動・画像比較の環境は別途必要 |
 | `authoring-a-skill` | 原文を保持。依存する Cursor 組み込み `create-skill` の Claude 用入口は今回作成していない |
 | `eval` | 原文を保持。実行結果と Cursor transcript を使ったエージェント評価環境は未移植 |
-| `babysit`・`shipping`・`opening-a-pr` | 原文を保持。PR 監視、Bugbot、レビュー解消、Graphite によるスタックの出荷は未移植 |
+| `babysit`・`shipping`・`opening-a-pr` | 原文を保持。PR 監視、Bugbot、レビュー解消、スタックの出荷は未移植 |
 | `autonomous-run`・`orchestrate`・`autopilot-full`・`autopilot-stack`・`multi-phase-plan` | 原文を保持。長時間の継続実行、起床予約、複数 PR の状態管理・マージ制御は未移植 |
 | `session-pickup`・`pause-safely` | 原文を保持。Cursor の会話・クラウド実行状態の受け渡しは未移植 |
 | `worktree-cleanup` | 原文を保持。Cursor transcript を使う作業状況の照合と iOS Simulator の処理は未移植 |

@@ -26,7 +26,7 @@ Claude の入口から読み込む pstack 本文・参照資料・playbook に�
 | `Task` による子エージェント起動 | `Agent` ツールを、そのセッションに公開されたスキーマで呼ぶ |
 | `generalPurpose` | `general-purpose` |
 | `poteto-agent` | `pstack-claude:poteto-agent`（`../agents/poteto-agent.md`） |
-| `Comment Sicko` | `pstack-claude:comment-sicko`（`../agents/comment-sicko.md`） |
+| `Comment Sicko`・`comment-sicko` | `pstack-claude:comment-sicko`（`../agents/comment-sicko.md`） |
 | `is_background: true` | エージェント定義の `background: true`。呼び出し時のバックグラウンド指定は実際の `Agent` スキーマに従う |
 | `readonly: true` | 調査・レビューだけを行い、ファイル変更を行わない役割としてプロンプトに渡す。Cursor 固有の引数ではなく、Claude のツール設定と依頼内容で表す |
 | `readonly: false` で MCP を確保 | Claude で実際に利用できる MCP ツールを使う。ファイル変更の範囲は元の調査・実装の依頼に従う |

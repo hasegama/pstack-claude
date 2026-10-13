@@ -1,8 +1,8 @@
 # pstack-claude
 
-[pstack](https://github.com/cursor/plugins/tree/799151d91b6e12ee7dbd09f708eec108d7de9b3b/pstack) の設計・実装・レビュー手順を、Claude のモデルで使うための非公式プラグイン。
+[pstack](https://github.com/cursor/plugins/tree/997ffc7fe26bdaa6478a14e7f5b8d5f9ed747102/pstack) の設計・実装・レビュー手順を、Claude のモデルで使うための非公式プラグイン。
 
-ラッパー40件・補助スキル3件・エージェント2件を提供する。pstack の手順・参照資料・補助スクリプトは、固定コミットの原文を無改変で同梱する。補助スキルは poteto-mode の playbook が名前で呼ぶ cursor-team-kit の `deslop`・`control-cli`・`control-ui` で、同梱の原文をそのまま読み込む。Claude 用の差分は [共通読み替え](plugins/pstack-claude/pstack/runtime.md) にまとめている。
+ラッパー46件・補助スキル3件・エージェント2件を提供する。pstack の手順・参照資料・補助スクリプトは、固定コミットの原文を無改変で同梱する。補助スキルは poteto-mode の playbook が名前で呼ぶ cursor-team-kit の `deslop`・`control-cli`・`control-ui` で、同梱の原文をそのまま読み込む。Claude 用の差分は [共通読み替え](plugins/pstack-claude/pstack/runtime.md) にまとめている。
 
 ## ローカルの Claude Code
 
@@ -38,7 +38,7 @@ Setup script には環境設定の環境変数が渡らないため、取得す�
 
 ## pstack のバージョンを揃える
 
-取得元と対応バージョンは [upstream.json](upstream.json) を正とする。初回版は pstack `0.14.4`、`cursor/plugins@799151d91b6e12ee7dbd09f708eec108d7de9b3b`。
+取得元と対応バージョンは [upstream.json](upstream.json) を正とする。この版は pstack `0.15.21`、`cursor/plugins@997ffc7fe26bdaa6478a14e7f5b8d5f9ed747102`。
 
 Cursor 側のセットアップも、利用するこの配布物の `upstream.json` を読み、`revision` の SHA を取得する。ラッパーと pstack の組み合わせを固定できる。ラッパーのバージョンは `plugin.json`、対応する pstack の SHA は `upstream.json` が管理する。
 

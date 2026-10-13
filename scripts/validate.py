@@ -16,11 +16,11 @@ def main():
     wrapper_names = json.loads((PLUGIN / 'pstack/skill-names.json').read_text())
     wrappers = sorted(PLUGIN / 'skills' / name / 'SKILL.md' for name in wrapper_names)
     agents = list((PLUGIN / 'agents').glob('*.md'))
-    assert wrappers == sorted((PLUGIN / 'skills').glob('*/SKILL.md')) and len(wrappers) == 40 and len(agents) == 2
+    assert wrappers == sorted((PLUGIN / 'skills').glob('*/SKILL.md')) and len(wrappers) == 46 and len(agents) == 2
     manifest = json.loads((PLUGIN / '.claude-plugin/plugin.json').read_text())
     helpers = list((PLUGIN / manifest['skills']).glob('*/SKILL.md'))
     assert sorted(path.parent.name for path in helpers) == ['control-cli', 'control-ui', 'deslop']
-    assert len(list((PLUGIN / 'upstream/pstack/skills').rglob('SKILL.md'))) == 45
+    assert len(list((PLUGIN / 'upstream/pstack/skills').rglob('SKILL.md'))) == 52
     for path in [*wrappers, *agents]:
         text = path.read_text()
         assert text.startswith('---\n') and re.search(r'(?m)^description: .+', text)

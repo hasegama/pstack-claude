@@ -1,6 +1,6 @@
 ---
 name: poteto-agent
-description: poteto-mode の手順で調査・設計・実装・検証を担当する。poteto の作業を委譲するときに使い、同じ担当が継続している場合はそのエージェントを再開する。
+description: /poteto-mode の実行中に、コード作成や補助作業を任される子エージェント。/poteto-mode 自体の実行役には使わない。作業ごとに新しく起動し、再開は poteto-mode の Subagents 節が認める場合に限る。
 model: inherit
 background: true
 ---
