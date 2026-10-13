@@ -6,7 +6,7 @@ Claude の入口から読み込む pstack 本文・参照資料・playbook に�
 
 - この文書を基準に、原文は `../upstream/pstack/skills/`、元のエージェントは `../upstream/pstack/agents/`、補助スキルは `../upstream/cursor-team-kit/skills/` にある。
 - 原文の `references/`、`playbooks/`、`scripts/` は、その原文のある場所から解決する。
-- 名前で参照するスキルには `../skills/<name>/SKILL.md` の入口があればそれを読む。補助スキル `deslop`・`control-cli`・`control-ui` は `../upstream/cursor-team-kit/skills/<name>/SKILL.md` を読む。入口は原文と同じく手動呼び出し専用で、Skill ツールからは呼べないため、ファイルを読んで使う。子にもこの文書と対象の入口・原文の実在するパスを渡す。
+- 名前で参照するスキルには `../skills/<name>/SKILL.md` の入口があればそれを読む。補助スキル `deslop`・`control-cli`・`control-ui` は `../upstream/cursor-team-kit/skills/<name>/SKILL.md` を読む。poteto-mode 以外の入口は原文と同じく手動呼び出し専用で、Skill ツールからは呼べないため、ファイルを読んで使う。子にもこの文書と対象の入口・原文の実在するパスを渡す。
 - 入口を Read で直接読む場合、`${CLAUDE_PLUGIN_ROOT}` はこの文書の親ディレクトリを指すものとして解決する。
 - 新規の検証スキルの出力先 `.cursor/skills/verify-<app>/` は、対象プロジェクトの `.claude/skills/verify-<app>/` と読み替える。既存の検証スキルを改修する場合は、その実在する場所を使う。
 

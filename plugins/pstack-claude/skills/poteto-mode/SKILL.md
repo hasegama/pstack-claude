@@ -1,7 +1,6 @@
 ---
 name: poteto-mode
 description: "pstack の設計原則と作業手順を使い、調査・設計・実装・検証を進める。/poteto-mode、poteto の流儀で作業してほしいという依頼に使う。"
-disable-model-invocation: true
 ---
 
 最初に [Claude 用の読み替え](${CLAUDE_PLUGIN_ROOT}/pstack/runtime.md)、続いて [原文](${CLAUDE_PLUGIN_ROOT}/upstream/pstack/skills/poteto-mode/SKILL.md) を全文読む。

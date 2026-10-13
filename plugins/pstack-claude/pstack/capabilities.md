@@ -23,7 +23,7 @@
 | `maintain-verification-skill` | 入口あり。検証スキルを実装・動作と照合して修正 | 終端の PR 作成・共有は今回の移植範囲外 |
 | `show-me-your-work` | 入口あり。TSV の記録と既存の `scripts/log.sh` | Cursor transcript と照合する監査は未移植。レビューは Claude のみ |
 | `figure-it-out` | 入口あり。独自の作業計画、検証単位、仮説検証ループ | 最後の transcript 監査は `show-me-your-work` と同じ制約 |
-| `poteto-mode` | 入口あり。原則と手順の読み込み、設計・実装の委譲 | 常駐モードの表示・リマインダー、後述の運用 playbook は未移植 |
+| `poteto-mode` | 入口あり。原則と手順の読み込み、設計・実装の委譲。本家と違い、Claude からも起動できる | 常駐モードの表示・リマインダー、後述の運用 playbook は未移植 |
 | `setup-pstack` | 原文のみ保持 | Cursor のモデル検出・推論予算の設定と `.mdc` 出力は使えない。今回は親の Claude を継承 |
 | `recall`・`reflect` | 原文のみ保持 | Cursor の会話履歴をたどる復元・振り返りは使えない。Claude の履歴形式への接続は未作成 |
 | `automate-me` | 原文のみ保持 | 会話履歴から個人の作業スタイルをスキル化する一連の処理は未移植 |

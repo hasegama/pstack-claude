@@ -9,6 +9,7 @@ import re
 ROOT = Path(__file__).resolve().parent.parent
 PLUGIN = ROOT / 'plugins/pstack-claude'
 MANUAL_ONLY = re.compile(r'(?m)^disable-model-invocation: true$')
+MODEL_INVOCABLE = {'poteto-mode'}
 
 
 def frontmatter(path):
@@ -36,7 +37,8 @@ def main():
             assert Path(target).is_file(), (path, target)
     for path in wrappers:
         original = PLUGIN / 'upstream/pstack/skills' / path.parent.name / 'SKILL.md'
-        assert bool(MANUAL_ONLY.search(frontmatter(path))) == bool(MANUAL_ONLY.search(frontmatter(original))), path
+        manual = bool(MANUAL_ONLY.search(frontmatter(original))) and path.parent.name not in MODEL_INVOCABLE
+        assert bool(MANUAL_ONLY.search(frontmatter(path))) == manual, path
     expected = {}
     for line in (ROOT / 'upstream-files.sha256').read_text().splitlines():
         sha, name = line.split('  ', 1)

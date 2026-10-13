@@ -21,7 +21,7 @@ Claude Code を起動し、例えば次のように呼ぶ。
 /pstack-claude:poteto-mode この機能を実装して
 ```
 
-入口は本家と同じく手動呼び出し専用で、Claude が会話の流れから自分で選ぶことはない。呼び出したスキルの手順が他のスキルを使うときは、Claude がそのファイルを読む。補助スキル3件は Claude が自分で呼べる。
+poteto-mode 以外の入口は本家と同じく手動呼び出し専用で、Claude が会話の流れから自分で選ぶことはない。poteto-mode は本家と違い、poteto の流儀で進めてほしいと頼めば Claude が自分で起動する。呼び出したスキルの手順が他のスキルを使うときは、Claude がそのファイルを読む。補助スキル3件は Claude が自分で呼べる。
 
 原本が同梱されているので、Cursor のインストールは不要。モデルは親の Claude を継承し、比較は独立したコンテキストで実行する。複数社のモデルを比較する機能にはならない。
 
@@ -44,7 +44,7 @@ Setup script には環境設定の環境変数が渡らないため、取得す�
 
 Cursor 側のセットアップも、利用するこの配布物の `upstream.json` を読み、`revision` の SHA を取得する。ラッパーと pstack の組み合わせを固定できる。
 
-更新時は原本と `upstream.json`・`upstream-files.sha256` を更新し、ラッパーと [機能対応表](plugins/pstack-claude/pstack/capabilities.md) を確認する。入口の `disable-model-invocation` は原文に合わせる。検証後に `plugin.json` のバージョンを pstack と同じにし、新しいリリースタグを作る。公開済みタグは移動しない。
+更新時は原本と `upstream.json`・`upstream-files.sha256` を更新し、ラッパーと [機能対応表](plugins/pstack-claude/pstack/capabilities.md) を確認する。入口の `disable-model-invocation` は、poteto-mode を除き原文に合わせる。検証後に `plugin.json` のバージョンを pstack と同じにし、新しいリリースタグを作る。公開済みタグは移動しない。
 
 ## 検証
 
