@@ -2,7 +2,7 @@
 
 [pstack](https://github.com/cursor/plugins/tree/997ffc7fe26bdaa6478a14e7f5b8d5f9ed747102/pstack) の設計・実装・レビュー手順を、Claude のモデルで使うための非公式プラグイン。
 
-ラッパー46件・補助スキル3件・エージェント2件を提供する。pstack の手順・参照資料・補助スクリプトは、固定コミットの原文を無改変で同梱する。補助スキルは poteto-mode の playbook が名前で呼ぶ cursor-team-kit の `deslop`・`control-cli`・`control-ui` で、同梱の原文をそのまま読み込む。Claude 用の差分は [共通読み替え](plugins/pstack-claude/pstack/runtime.md) にまとめている。
+ラッパー46件・補助スキル3件・エージェント2件を提供する。pstack の手順・参照資料・補助スクリプトは、固定コミットの原文を無改変で同梱する。本家の README と利用ガイド `docs/guide/` は Cursor での導入と操作の解説なので同梱しない。補助スキルは poteto-mode の playbook が名前で呼ぶ cursor-team-kit の `deslop`・`control-cli`・`control-ui` で、同梱の原文をそのまま読み込む。Claude 用の差分は [共通読み替え](plugins/pstack-claude/pstack/runtime.md) にまとめている。
 
 ## ローカルの Claude Code
 
