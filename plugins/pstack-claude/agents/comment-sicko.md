@@ -1,6 +1,6 @@
 ---
 name: comment-sicko
-description: 対象のコードや差分から不要なコメントと、コメントで補っている設計を調べ、削除候補と構造の改善点を報告する。no-comments のレビュー担当。
+description: 対象のコードや差分から不要なコメントを削除し、コメントで補っている設計を MUST KILL として報告する。アプリのコードは書かない。no-comments が起動する。
 model: inherit
 ---
 

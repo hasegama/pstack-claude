@@ -28,7 +28,7 @@
 | `recall`・`reflect` | 原文のみ保持 | Cursor の会話履歴をたどる復元・振り返りは使えない。Claude の履歴形式への接続は未作成 |
 | `automate-me` | 原文のみ保持 | 会話履歴から個人の作業スタイルをスキル化する一連の処理は未移植 |
 | `make-bot-ui` | 原文のみ保持 | Cursor の Grok Bot・Routine・秘密情報カードに連動した UI 作成は未移植 |
-| `poteto-help` | 原文のみ保持 | Cursor での導入・Custom Mode・`/setup-pstack` を前提に案内するため、入口は作らない |
+| `poteto-help` | 原文のみ保持 | Cursor での導入・Custom Mode・`/setup-pstack` を前提に案内するため、入口は作らない。原文がリンクする本家の README と `docs/guide/` は Cursor 利用者向けの解説なので同梱しない |
 | `deslop`・`control-cli`・`control-ui` | 同梱の原文をそのままスキルとして読み込む | ハーネスの構築手順を共有する。ブラウザー・PTY・tmux 等の実行環境を導入するものではない |
 
 Claude 用の入口を作らない 6 件も、同梱の `upstream/pstack/skills/` に残している。
@@ -41,10 +41,10 @@ Claude 用の入口を作らない 6 件も、同梱の `upstream/pstack/skills/
 | `hillclimb` | 測定・仮説・改善・意思決定ログを使う。長時間継続の制御、transcript 監査、PR 作成は未移植 |
 | `runtime-forensics`・`trace-forensics` | 計測・トレース読解の手順を使う。必要な計測環境と末尾の PR 手順は別途必要 |
 | `visual-parity` | 比較と修正の手順を使う。実際の UI 起動・画像比較の環境は別途必要 |
-| `authoring-a-skill` | 原文を保持。依存する Cursor 組み込み `create-skill` の Claude 用入口は今回作成していない |
+| `authoring-a-skill` | 原文を保持。Cursor 組み込みの `create-skill` は Claude にないため、runtime.md の読み替えどおり Claude Code のスキルの形式で書く |
 | `eval` | 原文を保持。実行結果と Cursor transcript を使ったエージェント評価環境は未移植 |
 | `babysit`・`shipping`・`opening-a-pr` | 原文を保持。PR 監視、Bugbot、レビュー解消、スタックの出荷は未移植 |
-| `autonomous-run`・`orchestrate`・`autopilot-full`・`autopilot-stack`・`multi-phase-plan` | 原文を保持。長時間の継続実行、起床予約、複数 PR の状態管理・マージ制御は未移植 |
+| `autonomous-run`・`orchestrate`・`autopilot-full`・`autopilot-stack`・`multi-phase-plan` | 原文を保持。`/loop` による起床と agent store の置き場所は runtime.md で読み替える。複数 PR の状態管理・マージ制御は未移植 |
 | `session-pickup`・`pause-safely` | 原文を保持。Cursor の会話・クラウド実行状態の受け渡しは未移植 |
 | `worktree-cleanup` | 原文を保持。Cursor transcript を使う作業状況の照合と iOS Simulator の処理は未移植 |
 
